@@ -1,0 +1,195 @@
+/******************************************************************
+
+Stylesheet: 1200px以上のモニタで適用
+
+******************************************************************/
+
+.c-txt-lr {
+  font-size: 2.8rem;
+}
+
+//#top 
+.p-top {
+
+  & .swiper-container {
+    height: 600px;
+
+    & .view-sp {
+      display: none;
+    }
+
+    & .view-pc {
+      display: block;
+    }
+  }
+
+  & .scrolldown {
+    left: 49vw;
+  }
+}
+
+//#about 
+.p-about {
+  padding-top: 5vw;
+}
+
+//#experience
+.p-experience {
+  &__desc {
+    margin-top: -20vw;
+  }
+
+  &__img02 {
+    top: 70%;
+  }
+
+  &__img03 {
+    top: 114%;
+  }
+
+  &__bg {
+    height: 80vh;
+  }
+}
+
+//#menu 
+.p-menu {
+  padding: 10vw 0 0 0;
+
+  & img {
+    height: 30%;
+    width: 30%;
+  }
+
+  &__link {
+    &::before {
+      left: 44%;
+    }
+  }
+}
+
+//#instagram
+.p-instagram {
+  margin-top: 0;
+
+  &__title {
+    & span {
+      &::after {
+        height: 37px;
+        width: 37px;
+      }
+    }
+  }
+}
+
+//#news
+.p-news {
+  padding: 10vw 0 8vw 0;
+
+  &__list {
+    & a {
+      padding: 2vw 0 2vw 2vw;
+    }
+  }
+}
+
+//#header
+.header {
+  background-color: #fff;
+  height: 110px;
+
+  & .mobile-button {
+    display: none;
+  }
+
+  & .logo {
+    margin: 40px 20px 0 40px;
+    width: 300px;
+    height: 60px;
+  }
+
+  & .mobile-container {
+    display: inline;
+    position: relative;
+  }
+
+  & .pc-container {
+    display: block;
+    padding: 4vw 10vw 0 0;
+  }
+
+  & .pc-header {
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__item {
+      font-size: 1.4rem;
+      padding-left: 5vw;
+    }
+
+  }
+}
+
+//.p-footer 
+.p-footer {
+  padding: 8vw 0;
+
+  & .c-logo {
+    & img {
+      width: 20%;
+      height: 20%;
+    }
+  }
+
+  &__sns {
+    margin-bottom: 7vw;
+  }
+}
+
+//* * * * * * menu-page * * * * * * *
+.c-top {
+  margin-top: 8vw;
+
+  &__img {
+    text-align: center;
+
+    & img {
+      height: 50%;
+      width: 50%;
+    }
+  }
+}
+
+//* * * * * * news-page * * * * * * *
+.c-news {
+  padding-top: 15vw;
+
+  &__title {
+    margin-bottom: 5vw !important;
+  }
+
+  &__list {
+    font-size: 1.5rem;
+
+    & a {
+      padding: 3vw 0 3vw 5vw;
+    }
+  }
+}
+
+//* * * * * * news-sl-page * * * * * * *
+.c-news-sl {
+  & .c-container {
+    padding: 0 12vw;
+  }
+
+  &__list {
+    padding-top: 6vw;
+  }
+
+  &__contents {
+    padding: 8vw 0;
+  }
+}

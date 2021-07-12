@@ -1,0 +1,102 @@
+/******************************************************************
+
+Stylesheet: 600px以上のモニタで適用
+
+******************************************************************/
+
+//header
+.header {
+  & .sp-navbtn {
+    display: none;
+  }
+
+  & .logo {
+    margin-top: 3vw;
+  }
+
+  & .mobile-container {
+    & .mobile-button {
+      right: 40px;
+    }
+  }
+}
+
+//#about
+.p-about {
+  &__img01 {
+    padding: 0 10vw;
+  }
+
+  &__img02 {
+    padding-right: 10vw;
+  }
+}
+
+//#experience
+.p-experience {
+  & img {
+    width: 280px;
+    height: 280px;
+  }
+
+  &__img02 {
+    right: 16vw;
+  }
+
+
+  &__img03 {
+    top: 80%;
+  }
+
+  &__subtit {
+    margin-top: 40vw;
+  }
+
+  &__bg {
+    right: 10vw;
+    height: 150vw;
+    width: 55%;
+  }
+}
+
+//#menu
+.p-menu {
+  padding-bottom: 10vw;
+
+  &__infslider {
+    & img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  &__link {
+    &::before {
+      top: -32%;
+      left: 40%;
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+//.p-footer 
+.p-footer {
+  & .c-logo {
+    & img {
+      width: 22%;
+    }
+  }
+}
+
+//* * * * * * news-sl * * * * * *
+.c-news-sl {
+
+  &__contents {
+    line-height: 3;
+  }
+
+  &__date {
+    font-size: 20px;
+  }
+}
