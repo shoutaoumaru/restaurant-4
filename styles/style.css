@@ -1814,39 +1814,11 @@ a {
 .mobile-menu__nav {
   display: block;
   height: 100%;
-  width: 55%;
+  width: 65%;
   background-color: #fff;
 }
 
-.mobile-menu__nav address {
-  padding-left: 35px;
-}
-
-.mobile-menu__nav address em {
-  display: block;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-}
-
-.mobile-menu__nav address a {
-  display: inline-block;
-  padding: 8px 6px 8px 0;
-}
-
-.mobile-menu__nav address a span {
-  display: inline-block;
-  border-bottom: 1px solid #295282;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 0.02em;
-}
-
-.mobile-menu__nav address p {
-  font-size: 0.8em;
-  letter-spacing: 0.01em;
-}
-
-.mobile-menu__ul {
+.mobile-menu__list {
   width: 100%;
   font-size: 0.9em;
   text-align: left;
@@ -1855,22 +1827,101 @@ a {
   padding-top: 170px;
 }
 
-.mobile-menu__li {
+.mobile-menu__item {
   opacity: 0;
   margin-bottom: 35px;
 }
 
-.mobile-menu__li a {
+.mobile-menu__item a {
   color: #474747;
 }
 
-.mobile-menu address a {
-  color: #474747;
+.mobile-menu .reserve-btn-wrap {
+  padding: 0 10px 0 35px;
 }
 
-.mobile-menu .btn-reserve {
-  width: 80%;
-  margin: 20px auto;
+.mobile-menu .reserve-btn-wrap h4 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.mobile-menu .reserve-btn-wrap .reserve-btn {
+  border: 1px solid #161616;
+  display: inline-block;
+  margin-bottom: 25px;
+  width: 172px;
+}
+
+.mobile-menu .reserve-btn-wrap .reserve-btn span {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 10px 20px 10px 10px;
+  font-size: 12px;
+}
+
+.mobile-menu .reserve-btn-wrap .reserve-btn-net span {
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.mobile-menu .reserve-btn-wrap .reserve-btn-net span::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  height: 12px;
+  width: 12px;
+  background-image: url(/images/common/icon-link-1-black.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mobile-menu .reserve-btn-wrap .reserve-btn-tel span {
+  letter-spacing: 4px;
+}
+
+.mobile-menu .reserve-btn-wrap .reserve-btn-tel span::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  height: 12px;
+  width: 12px;
+  background-image: url(/images/common/icon-tel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 600px) {
+  .mobile-menu__list {
+    padding-left: 10vw;
+    font-size: 1.2rem;
+  }
+  .mobile-menu__item {
+    margin-bottom: 55px;
+  }
+  .mobile-menu .reserve-btn-wrap {
+    padding-left: 10vw;
+  }
+  .mobile-menu .reserve-btn-wrap h4 {
+    font-size: 18px;
+  }
+  .mobile-menu .reserve-btn-wrap .reserve-btn {
+    width: 240px;
+  }
+  .mobile-menu .reserve-btn-wrap .reserve-btn span {
+    padding: 15px 30px 15px 20px;
+    font-size: 16px;
+  }
+  .mobile-menu .reserve-btn-wrap .reserve-btn span::after {
+    top: 16px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .mobile-container {
