@@ -132,6 +132,25 @@ Stylesheet: 1200px以上のモニタで適用
   }
 }
 
+//.p-about 
+.p-about {
+  &__img01 {
+    height: 40vh;
+  }
+
+  &__img02 {
+    height: 40vh;
+  }
+}
+
+//.p-experience
+.p-experience {
+  &__bg {
+    top: 11%;
+    height: 100vh;
+  }
+}
+
 //.p-footer 
 .p-footer {
   padding: 8vw 0;
@@ -149,15 +168,21 @@ Stylesheet: 1200px以上のモニタで適用
 }
 
 //* * * * * * menu-page * * * * * * *
-.c-top {
-  margin-top: 8vw;
+.superwrapper-menu {
+  .c-top {
+    margin-top: 8vw;
 
-  &__img {
-    text-align: center;
+    &__tit {
+      padding: 0 0 5vw 0;
+    }
 
-    & img {
-      height: 50%;
-      width: 50%;
+    &__img {
+      text-align: center;
+
+      & img {
+        height: 50%;
+        width: 50%;
+      }
     }
   }
 }

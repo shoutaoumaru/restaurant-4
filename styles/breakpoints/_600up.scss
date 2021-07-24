@@ -21,6 +21,15 @@ Stylesheet: 600px以上のモニタで適用
   }
 }
 
+//.p-news
+.p-news {
+  padding: 15vw 0 5vw 0;
+
+  &__link {
+    padding: 2vw 0;
+  }
+}
+
 //#about
 .p-about {
   &__img01 {
@@ -61,7 +70,7 @@ Stylesheet: 600px以上のモニタで適用
 
 //#menu
 .p-menu {
-  padding-bottom: 10vw;
+  padding: 10vw 0 0 0;
 
   &__infslider {
     & img {
@@ -80,12 +89,24 @@ Stylesheet: 600px以上のモニタで適用
   }
 }
 
+//.instagram 
+.p-instagram {
+  padding: 10vw 0;
+}
+
 //.p-footer 
 .p-footer {
   & .c-logo {
     & img {
       width: 22%;
     }
+  }
+}
+
+//* * * * * * menu-page * * * * * *
+.c-menu {
+  .panel-group {
+    padding: 5vw 10vw;
   }
 }
 
