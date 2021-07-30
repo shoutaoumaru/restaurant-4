@@ -2,18 +2,7 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>飲食店テンプレート4/HOME</title>
-  <link rel="stylesheet" href="/styles/vendor/logo-animation.min.css">
-  <link rel="stylesheet" href="/styles/vendor/bootstrap-reboot.css">
-  <link rel="stylesheet" href="/styles/vendor/animsition.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400&family=Righteous&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/styles/vendor/swiper.min.css">
-  <link rel="stylesheet" href="/styles/style.css">
+  <?php get_header(); ?>
 </head>
 
 <body class="animsition">
@@ -92,8 +81,8 @@
     <!-- /.svg-animation -->
     <header id="header" class="header">
       <div class="mobile-container">
-        <div class=" logo__img">
-          <a class="animsition-link" href="/">
+        <div class="logo__img">
+          <a class="animsition-link" href="<?php echo esc_url( home_url('/')); ?>">
             <div class="logo"></div>
           </a>
         </div>
@@ -109,9 +98,9 @@
       <div class="pc-container">
         <div class="pc-header">
           <ul class="pc-header__list">
-            <li class="pc-header__item"><a class="animsition-link" href="/">top</a></li>
-            <li class="pc-header__item"><a class="animsition-link" href="/menu/menu.html">menu</a></li>
-            <li class="pc-header__item"><a class="animsition-link" href="/news/news.html">news</a></li>
+            <li class="pc-header__item"><a class="animsition-link" href="<?php echo esc_url( home_url('/')); ?>">top</a></li>
+            <li class="pc-header__item"><a class="animsition-link" href="<?php echo esc_url( home_url('/menu')); ?>">menu</a></li>
+            <li class="pc-header__item"><a class="animsition-link" href="<?php echo esc_url( home_url('/news')); ?>">news</a></li>
           </ul>
         </div>
       </div>
@@ -132,16 +121,16 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img class="view-sp" src="/images/home/paella@sp.jpg" />
-                <img class="view-pc" src="/images/home/paella@pc.jpg" />
+                <img class="view-sp" src="<?php echo get_template_directory_uri(); ?>/images/home/paella@sp.jpg" />
+                <img class="view-pc" src="<?php echo get_template_directory_uri(); ?>/images/home/paella@pc.jpg" />
               </div>
               <div class="swiper-slide">
-                <img class="view-sp" src="/images/home/steak_1@sp.jpg" />
-                <img class="view-pc" src="/images/home/steak_1@pc.jpg" />
+                <img class="view-sp" src="<?php echo get_template_directory_uri(); ?>/images/home/steak_1@sp.jpg" />
+                <img class="view-pc" src="<?php echo get_template_directory_uri(); ?>/images/home/steak_1@pc.jpg" />
               </div>
               <div class="swiper-slide">
-                <img class="view-sp" src="/images/home/store_3@sp.jpg" />
-                <img class="view-pc" src="/images/home/store_3@pc.jpg" />
+                <img class="view-sp" src="<?php echo get_template_directory_uri(); ?>/images/home/store_3@sp.jpg" />
+                <img class="view-pc" src="<?php echo get_template_directory_uri(); ?>/images/home/store_3@pc.jpg" />
               </div>
             </div>
             <a class="scrolldown clip-js1 top" href="#">Scroll</a>
@@ -157,27 +146,19 @@
         </h2>
         <div class="p-news__wrapper item">
           <ul class="p-news__list ">
-            <li class="p-news__item">
-              <a class="p-news__link animsition-link c-txt-sm" href="/news/news-single.html">
-                <span>2021/05/25</span>
-                <p>営業時間短縮営業について</p>
-              </a>
-            </li>
-            <li class="p-news__item">
-              <a class="p-news__link animsition-link c-txt-sm" href="/news/news-single.html">
-                <span>2021/05/25</span>
-                <p>新型コロナウィルス感染拡大について</p>
-              </a>
-            </li>
-            <li class="p-news__item">
-              <a class="p-news__link animsition-link c-txt-sm" href="/news/news-single.html">
-                <span>2021/05/25</span>
-                <p>ホームページリニューアル致しました</p>
-              </a>
-            </li>
+            <?php query_posts('posts_per_page=3'); ?>
+            <?php if (have_posts()) : while(have_posts()) : the_post();?>
+              <li class="p-news__item">
+                <a class="p-news__link animsition-link c-txt-sm" href="<?php the_permalink(); ?>">
+                  <span class="p-news__date"><?php echo get_the_date(); ?></span>
+                  <p><?php the_title(); ?></p>
+                </a>
+              </li>
+            <?php endwhile; ?>
+            <?php endif; ?>
           </ul>
           <div class="view-more">
-            <a class="view-more__link animsition-link" href="/news/news.html">
+            <a class="view-more__link animsition-link" href="<?php echo esc_url( home_url('/news')); ?>">
               <span>NEWS LIST</span></a>
           </div>
         </div>
@@ -188,10 +169,10 @@
       <div class="c-container appear up">
         <div class="p-about__img-wrap item">
           <figure class="p-about__img01">
-            <img src="/images/home/ocean.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/ocean.jpg" alt="">
           </figure>
           <figure class="p-about__img02">
-            <img src="/images/home/store__3.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/store__3.jpg" alt="">
           </figure>
         </div>
         <div class="p-about__desc">
@@ -220,13 +201,13 @@
         </h2>
         <div class="p-experience__img-wrap item parallax">
           <figure class="p-experience__img01">
-            <img src="/images/home/pizza.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/pizza.jpg" alt="">
           </figure>
           <figure class="p-experience__img02">
-            <img src="/images/home/steak_2@pc.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/steak_2@pc.jpg" alt="">
           </figure>
           <figure class="p-experience__img03">
-            <img src="/images/home/magurodon.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/magurodon.jpg" alt="">
           </figure>
         </div>
         <div class="p-experience__desc item">
@@ -242,18 +223,18 @@
       </div>
     </section>
     <!-- //#experience -->
-    <section id="menu" class="p-menu">
+    <section id="menu" class="p-menu"> 
       <div class="c-container appear up">
         <div class="p-menu__infslider item">
           <div class="infiniteslide">
-            <img src="/images/home/salad_1@pc.jpg" alt="">
-            <img class="small" src="/images/home/yakitori.jpg" alt="">
-            <img src="/images/home/pasta@pc.jpg" alt="">
-            <img src="/images/home/magurodon.jpg" alt="">
-            <img src="/images/home/pizza.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/salad_1@pc.jpg" alt="">
+            <img class="small" src="<?php echo get_template_directory_uri(); ?>/images/home/yakitori.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/pasta@pc.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/magurodon.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/pizza.jpg" alt="">
           </div>
           <div class="p-menu__link">
-            <a class="p-menu__link-btn animsition-link" href="/menu/menu.html">
+            <a class="p-menu__link-btn animsition-link" href="<?php echo esc_url( home_url('/menu')); ?>l">
               <p>menu</p>
             </a>
           </div>
@@ -267,7 +248,7 @@
           </p>
         </div>
         <div class="view-more item">
-          <a class="view-more__link animsition-link" href="/menu/menu.html">
+          <a class="view-more__link animsition-link" href="<?php echo esc_url( home_url('/menu')); ?>">
             <span>MENU LIST</span></a>
         </div>
       </div>
@@ -286,16 +267,16 @@
         <div class="p-instagram__img-wrap item">
           <div class="p-instagram__img">
             <figure>
-              <img src="/images/home/ocean.jpg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/home/ocean.jpg" alt="">
             </figure>
             <figure>
-              <img src="/images/home/store__3.jpg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/home/store__3.jpg" alt="">
             </figure>
             <figure>
-              <img src="/images/home/pasta@pc.jpg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/home/pasta@pc.jpg" alt="">
             </figure>
             <figure>
-              <img src="/images/home/paella@sp.jpg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/home/paella@sp.jpg" alt="">
             </figure>
           </div>
         </div>
@@ -353,7 +334,7 @@
           </div>
         </div>
         <div class="c-logo">
-          <img src="/images/common/riv_logo.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/riv_logo.png" alt="">
         </div>
         <div class="copyright">
           &copy; RivRound.inc
@@ -365,13 +346,13 @@
       <nav class="mobile-menu__nav">
         <ul class="mobile-menu__list">
           <li class="mobile-menu__item">
-            <a class="animsition-link" href="/">top</a>
+            <a class="animsition-link" href="<?php echo esc_url( home_url('/')); ?>">top</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="animsition-link" href="/menu/menu.html">menu</a>
+            <a class="animsition-link" href="<?php echo esc_url( home_url('/menu')); ?>">menu</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="animsition-link" href="/news/news.html">news</a>
+            <a class="animsition-link" href="<?php echo esc_url( home_url('/news')); ?>">news</a>
           </li>
         </ul>
         <div class="reserve-btn-wrap">
@@ -393,21 +374,7 @@
     <!------ /.mobile-menu ----->
   </div>
   <!-- .superwrapper -->
-  <script src="/scripts/vendor/pace.js"></script>
-  <script src="/scripts/vendor/swiper.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="/scripts/vendor/animsition.min.js"></script>
-  <script src="/scripts/libs/hero-slider.js"></script>
-  <script src="/scripts/vendor/infiniteslidev2.js"></script>
-  <script src="/scripts/libs/text-animation.js"></script>
-  <script src="/scripts/libs/scroll-btn.js"></script>
-  <script src="/scripts/libs/page.js"></script>
-  <script src="/scripts/libs/scroll.js"></script>
-  <script src="/scripts/libs/mobile-menu.js"></script>
-  <script src="/scripts/vendor/simpleParallax.min.js"></script>
-  <script src="/scripts/libs/parallax.js"></script>
-  <script src="/scripts/libs/tab.js"></script>
-  <script src="/scripts/main.js"></script>
+  <?php get_footer(); ?>
 </body>
 
 </html>

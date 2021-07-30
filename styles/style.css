@@ -758,7 +758,7 @@ a {
 .icon-tel::before {
   content: '';
   display: block;
-  background-image: url(/images/common/icon-tel.png);
+  background-image: url(../images/common/icon-tel.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -773,7 +773,7 @@ a {
 .icon-map::before {
   content: '';
   display: block;
-  background-image: url(/images/common/icon-map.png);
+  background-image: url(../images/common/icon-map.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -788,7 +788,7 @@ a {
 .icon-net::before {
   content: '';
   display: block;
-  background-image: url(/images/common/icon-calendar.png);
+  background-image: url(../images/common/icon-calendar.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -809,7 +809,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(/images/common/icon-insta-gr.png);
+  background-image: url(../images/common/icon-insta-gr.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -818,10 +818,7 @@ a {
 }
 
 .header {
-  z-index: 2000;
-  height: 70px;
   width: 100%;
-  background-color: #fff;
 }
 
 .header .logo__img {
@@ -836,7 +833,7 @@ a {
 }
 
 .header .logo {
-  background-image: url(/images/common/riv_logo.png);
+  background-image: url(../images/common/riv_logo.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -905,6 +902,7 @@ a {
 
 .p-top {
   position: relative;
+  margin-top: 25px;
 }
 
 .p-top__txtarea {
@@ -1112,7 +1110,7 @@ a {
   display: inline-block;
   height: 15px;
   width: 15px;
-  background-image: url(/images/common/arrow.png);
+  background-image: url(../images/common/arrow.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1149,7 +1147,7 @@ a {
   display: inline-block;
   height: 25px;
   width: 25px;
-  background-image: url(/images/common/icon-insta-gr.png);
+  background-image: url(../images/common/icon-insta-gr.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1199,7 +1197,7 @@ a {
   content: '';
   height: 20px;
   width: 20px;
-  background-image: url(/images/common/icon-map.png);
+  background-image: url(../images/common/icon-map.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1237,6 +1235,10 @@ a {
 
 .p-news__item:first-child {
   border-top: 1px solid #ebebeb;
+}
+
+.p-news__date {
+  color: #a0a0a0;
 }
 
 .p-news .view-more {
@@ -1308,7 +1310,7 @@ a {
   right: 0;
   bottom: 0;
   margin: auto;
-  background-image: url(/images/common/icon-insta-gr.png);
+  background-image: url(../images/common/icon-insta-gr.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1340,7 +1342,7 @@ a {
   right: 0;
   bottom: 0;
   margin: auto;
-  background-image: url(/images/common/facebook-ico.png);
+  background-image: url(../images/common/facebook-ico.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1352,6 +1354,10 @@ a {
   text-align: center;
   margin-top: 5vw;
   font-size: .8rem;
+}
+
+.superwrapper-menu {
+  padding-top: 50px;
 }
 
 .superwrapper-menu .c-top__tit {
@@ -1378,15 +1384,22 @@ a {
 .c-news__link {
   display: block;
   padding: 8vw 0;
-  border-bottom: 1px solid #ebebeb;
-}
-
-.c-news__link:first-child {
-  border-top: 1px solid #ebebeb;
 }
 
 .c-news__link p {
   margin-top: 2vw;
+}
+
+.c-news__item {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.c-news__item:first-child {
+  border-top: 1px solid #ebebeb;
+}
+
+.c-news__date {
+  color: #a0a0a0;
 }
 
 .c-news .page-numbers {
@@ -1433,7 +1446,7 @@ a {
   content: "";
   position: absolute;
   right: 0;
-  background-image: url(/images/common/arrow.png);
+  background-image: url(../images/common/arrow.png);
   background-position: right center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1479,7 +1492,7 @@ a {
 }
 
 .c-news-sl__date {
-  color: #adadad;
+  color: #a0a0a0;
 }
 
 .c-news-sl__list {
@@ -1881,7 +1894,7 @@ a {
   right: 5px;
   height: 12px;
   width: 12px;
-  background-image: url(/images/common/icon-link-1-black.png);
+  background-image: url(../images/common/icon-link-1-black.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1898,7 +1911,7 @@ a {
   right: 10px;
   height: 12px;
   width: 12px;
-  background-image: url(/images/common/icon-tel.png);
+  background-image: url(../images/common/icon-tel.png);
   background-size: contain;
   background-repeat: no-repeat;
 }

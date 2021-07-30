@@ -1,17 +1,12 @@
+<?php 
+/* Template Name: menu
+*/
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>飲食店テンプレート4/menu</title>
-  <link rel="stylesheet" href="/styles/vendor/bootstrap-reboot.css">
-  <link rel="stylesheet" href="/styles/vendor/animsition.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400&family=Righteous&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/styles/style.css">
+  <?php get_header(); ?>
 </head>
 
 <body>
@@ -19,8 +14,8 @@
   <div class="superwrapper-menu animsition">
     <header id="header" class="header">
       <div class="mobile-container">
-        <div class=" logo__img">
-          <a class="animsition-link" href="/">
+        <div class="logo__img">
+          <a class="animsition-link" href="<?php echo esc_url( home_url('/')); ?>">
             <div class="logo"></div>
           </a>
         </div>
@@ -36,9 +31,9 @@
       <div class="pc-container">
         <div class="pc-header">
           <ul class="pc-header__list">
-            <li class="pc-header__item"><a class="animsition-link" href="/">top</a></li>
-            <li class="pc-header__item"><a class="animsition-link" href="/menu/menu.html">menu</a></li>
-            <li class="pc-header__item"><a class="animsition-link" href="/news/news.html">news</a></li>
+            <li class="pc-header__item"><a class="animsition-link" href="<?php echo esc_url( home_url('/')); ?>">top</a></li>
+            <li class="pc-header__item"><a class="animsition-link" href="<?php echo esc_url( home_url('/menu')); ?>">menu</a></li>
+            <li class="pc-header__item"><a class="animsition-link" href="<?php echo esc_url( home_url('/news')); ?>">news</a></li>
           </ul>
         </div>
       </div>
@@ -55,11 +50,11 @@
     <!-- /#header -->
     <div id="c-top" class="c-top appear up">
       <div class="c-container item">
-        <h1 class="c-top__tit clip-js1 left">
+        <h1 class="c-top__tit clip-js2 left">
           <span class="c-txt-lr">menu</span>
         </h1>
         <div class="c-top__img">
-          <img src="/images/home/paella@pc.jpg" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/home/paella@pc.jpg" alt="">
         </div>
       </div>
     </div>
@@ -226,7 +221,7 @@
           </div>
         </div>
         <div class="c-logo">
-          <img src="/images/common/riv_logo.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/riv_logo.png" alt="">
         </div>
         <div class="copyright">
           &copy; RivRound.inc
@@ -238,13 +233,13 @@
       <nav class="mobile-menu__nav">
         <ul class="mobile-menu__list">
           <li class="mobile-menu__item">
-            <a class="animsition-link" href="/">top</a>
+            <a class="animsition-link" href="<?php echo esc_url( home_url('/')); ?>">top</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="animsition-link" href="/menu/menu.html">menu</a>
+            <a class="animsition-link" href="<?php echo esc_url( home_url('/menu')); ?>">menu</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="animsition-link" href="/news/news.html">news</a>
+            <a class="animsition-link" href="<?php echo esc_url( home_url('/news')); ?>">news</a>
           </li>
         </ul>
         <div class="reserve-btn-wrap">
@@ -266,16 +261,7 @@
     <!------ /.mobile-menu ----->
   </div>
   <!-- .superwrapper -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="/scripts/vendor/simpleParallax.min.js"></script>
-  <script src="/scripts/libs/text-animation.js"></script>
-  <script src="../scripts/vendor/animsition.min.js"></script>
-  <script src="../scripts/libs/page.js"></script>
-  <script src="/scripts/libs/scroll.js"></script>
-  <script src="/scripts/libs/scroll-btn.js"></script>
-  <script src="/scripts/libs/mobile-menu.js"></script>
-  <script src="/scripts/libs/tab.js"></script>
-  <script src="/scripts/c-main.js"></script>
+  <?php get_template_part('includes/c-footer'); ?>
 </body>
 
 </html>
