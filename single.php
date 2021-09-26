@@ -44,6 +44,10 @@
       <!-- /.sp-navbtn -->
     </header>
     <!-- /#header -->
+    <div class="c-top-view">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/cafe.jpg" alt="" />
+      </div>
+      <!-- /.c-top-view -->
     <section class="c-news-sl">
       <div class="c-container">
         <ul class="c-news-sl__list">
