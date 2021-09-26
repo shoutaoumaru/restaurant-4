@@ -1,7 +1,10 @@
-//* * * * * * setting * * * * * * * 
+//* * * * * * setting * * * * * * *
 body {
-  font-family: 'Righteous', 'Noto Serif JP', cursive;
+  font-family: "Righteous", "Noto Serif JP", cursive;
   text-transform: uppercase;
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 img {
@@ -28,7 +31,7 @@ a {
   letter-spacing: 5px;
   line-height: 2;
   color: $cBlack;
-  font-family: 'Righteous', 'Noto Serif JP', cursive;
+  font-family: "Righteous", "Noto Serif JP", cursive;
 }
 
 .c-txt-md {
@@ -36,28 +39,26 @@ a {
   letter-spacing: 4px;
   line-height: 2;
   color: $cBlack;
-  font-family: 'Righteous', 'Noto Serif JP', cursive;
-
+  font-family: "Righteous", "Noto Serif JP", cursive;
 }
 
 .c-txt-sm {
-  font-size: .9rem;
+  font-size: 0.9rem;
   letter-spacing: 2px;
   line-height: 2;
   color: $cBlack;
 }
 
 .c-txt-xs {
-  font-size: .7rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   line-height: 2;
   color: $cSubBlack;
 }
 
-
 .page-link {
   font-weight: bold;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: rgb(66, 66, 66);
 }
 
@@ -75,7 +76,7 @@ a {
       position: absolute;
       top: 50%;
       left: 0;
-      content: '';
+      content: "";
       display: inline-block;
       height: 1px;
       width: 8vw;
@@ -100,10 +101,9 @@ a {
     line-height: 2.2;
     color: $cSubBlack;
     font-weight: 100;
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-bottom: 4vw;
   }
-
 }
 
 .c-txt-vertical {
@@ -112,7 +112,7 @@ a {
   left: 5%;
   color: #a7816d;
   writing-mode: vertical-lr;
-  font-size: .5rem;
+  font-size: 0.5rem;
   letter-spacing: 2px;
 }
 
@@ -146,7 +146,7 @@ a {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     background-image: url(/images/common/icon-tel.png);
     background-position: center;
@@ -155,14 +155,13 @@ a {
     height: 17px;
     width: 17px;
   }
-
 }
 
 .icon-map {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     background-image: url(/images/common/icon-map.png);
     background-position: center;
@@ -171,14 +170,13 @@ a {
     height: 17px;
     width: 17px;
   }
-
 }
 
 .icon-net {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     background-image: url(/images/common/icon-calendar.png);
     background-position: center;
@@ -187,7 +185,6 @@ a {
     height: 17px;
     width: 17px;
   }
-
 }
 
 .icon-insta {
@@ -198,7 +195,7 @@ a {
   padding-bottom: 5px;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -211,12 +208,11 @@ a {
   }
 }
 
-//* * * * * * HOME * * * * * * * 
+//* * * * * * HOME * * * * * * *
 
 //#header
 .header {
   z-index: 2000;
-  height: 70px;
   width: 100%;
   background-color: #fff;
 
@@ -281,7 +277,7 @@ a {
     bottom: 0;
     left: 0;
     background-color: #fff;
-    opacity: .7;
+    opacity: 0.7;
     height: 6vh;
     width: 100%;
     z-index: 2000;
@@ -313,15 +309,14 @@ a {
     }
   }
 
-  @media (min-width:960px) {
+  @media (min-width: 960px) {
     & .pc-container {
       display: block;
     }
   }
 }
 
-
-//#top 
+//#top
 .p-top {
   position: relative;
 
@@ -343,13 +338,11 @@ a {
     & .sub {
       & p {
         font-weight: 300;
-        font-size: .9rem;
+        font-size: 0.9rem;
         line-height: 2;
         color: $cWhite;
       }
     }
-
-
   }
 
   & .swiper-container {
@@ -357,7 +350,7 @@ a {
   }
 }
 
-//#about 
+//#about
 .p-about {
   padding: 10vw 0;
 
@@ -402,7 +395,6 @@ a {
     position: absolute;
     top: 10%;
     left: 10%;
-
 
     & img {
       width: 180px;
@@ -489,7 +481,7 @@ a {
       position: absolute;
       top: -17%;
       left: 35%;
-      content: '';
+      content: "";
       display: block;
       background-color: #fff;
       height: 73%;
@@ -523,7 +515,7 @@ a {
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 2px;
         right: -25px;
@@ -559,7 +551,7 @@ a {
       padding-right: 50px;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 6px;
         right: 10px;
@@ -596,7 +588,7 @@ a {
 
     & p {
       margin-top: 3vw;
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
 
     & .tel {
@@ -610,13 +602,13 @@ a {
       display: inline-block;
       border-bottom: 1px solid $cSubBlack;
       margin-top: 5vw;
-      font-size: .8rem;
+      font-size: 0.8rem;
 
       &::before {
         position: absolute;
         top: 0;
         left: 0;
-        content: '';
+        content: "";
         height: 20px;
         width: 20px;
         background-image: url(/images/common/icon-map.png);
@@ -665,10 +657,9 @@ a {
   & .view-more {
     padding-right: 0;
   }
-
 }
 
-//#footer 
+//#footer
 .p-footer {
   padding: 10vw 0;
   background-color: rgb(238, 231, 231);
@@ -727,7 +718,6 @@ a {
         width: 22px;
       }
     }
-
   }
 
   & .sns-fb {
@@ -758,19 +748,17 @@ a {
         width: 22px;
       }
     }
-
   }
 
   & .copyright {
     text-align: center;
     margin-top: 5vw;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
-//* * * * * * menu-page * * * * * * * 
+//* * * * * * menu-page * * * * * * *
 .superwrapper-menu {
-
   .c-top {
     &__tit {
       padding: 0 0 12vw 0;
@@ -791,9 +779,9 @@ a {
   }
 }
 
-//* * * * * * news-page * * * * * * * 
+//* * * * * * news-page * * * * * * *
 .c-news {
-  padding-top: 20vw;
+  padding-top: 5vw;
 
   &__link {
     display: block;
@@ -829,7 +817,7 @@ a {
       width: 10vw;
       height: 10vw;
       border-radius: 100%;
-      border: 1px solid #C4CCD1;
+      border: 1px solid #c4ccd1;
       background: #fff;
       margin: 0 1.3vw;
     }
@@ -855,13 +843,13 @@ a {
       }
     }
 
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
       & .next {
         display: none;
       }
     }
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       & .page-numbers:not(.next):not(.prev) {
         width: 40px;
         height: 40px;
@@ -871,7 +859,7 @@ a {
 
   .c-news__contents {
     line-height: 2;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .c-news__title {
@@ -884,10 +872,8 @@ a {
   }
 }
 
-//* * * * * * news-single-page * * * * * * * 
+//* * * * * * news-single-page * * * * * * *
 .c-news-sl {
-  padding-top: 50px;
-
   & .c-container {
     padding: 0 5vw;
   }
