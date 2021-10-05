@@ -1,3 +1,14 @@
+.pdf-link {
+  text-align: center;
+  margin-bottom: 50px;
+
+  & a {
+    border: 1px solid $cSubWhite;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+}
+
 .tab-group {
   display: flex;
   justify-content: space-around;
@@ -21,21 +32,48 @@
 .panel.is-show {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .panel-group {
-  padding: 10vw 10vw;
+  padding: 10vw 0vw;
+
+  @media (min-width:960px) {
+    padding: 2vw 0;
+  }
+}
+
+.name {
+  margin-bottom: 10px;
 }
 
 .panel {
-  &__txt {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
 
   &__item {
-    width: 100%;
+    width: 47%;
     padding: 3vw 0;
+  }
+
+  &__img {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width:960px) {
+    &__item {
+      width: 30%;
+      padding: 3vw 0;
+    }
+
+    & .name {
+      font-size: 24px;
+    }
+
+    & .price {
+      font-size: 24px;
+    }
+
+    &__img {
+      margin-bottom: 15px;
+    }
   }
 }
