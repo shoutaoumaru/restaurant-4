@@ -2,6 +2,7 @@
 body {
   font-family: "Righteous", "Noto Serif JP", cursive;
   text-transform: uppercase;
+
   &.hidden {
     overflow: hidden;
   }
@@ -661,7 +662,7 @@ a {
 
 //#footer
 .p-footer {
-  padding: 10vw 0;
+  padding: 5vw 0;
   background-color: rgb(238, 231, 231);
 
   &__nav {
@@ -687,7 +688,7 @@ a {
   &__sns {
     display: flex;
     justify-content: center;
-    margin-bottom: 10vw;
+    margin-bottom: 5vw;
   }
 
   & .sns-insta {
@@ -760,9 +761,40 @@ a {
 //* * * * * * menu-page * * * * * * *
 .superwrapper-menu {
   .c-top {
+    position: relative;
+    margin-bottom: 50px;
+
+    &__img {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: $cBlack;
+        opacity: 0.3;
+      }
+
+      @media (min-width:600px) {
+        height: 250px;
+      }
+    }
+
     &__tit {
-      padding: 0 0 12vw 0;
-      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      margin: auto;
+      z-index: 100;
+
+      & span {
+        color: $cWhite;
+      }
     }
 
     & p {
@@ -770,12 +802,9 @@ a {
     }
   }
 
-  .c-menu {
-    padding: 10vw 0;
-
-    .c-txt-xs {
-      text-align: center;
-    }
+  .c-txt-xs {
+    text-align: center;
+    margin-bottom: 50px;
   }
 }
 

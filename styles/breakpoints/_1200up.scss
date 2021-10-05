@@ -153,8 +153,6 @@ Stylesheet: 1200px以上のモニタで適用
 
 //.p-footer 
 .p-footer {
-  padding: 8vw 0;
-
   & .c-logo {
     & img {
       width: 20%;
@@ -164,26 +162,6 @@ Stylesheet: 1200px以上のモニタで適用
 
   &__sns {
     margin-bottom: 7vw;
-  }
-}
-
-//* * * * * * menu-page * * * * * * *
-.superwrapper-menu {
-  .c-top {
-    margin-top: 8vw;
-
-    &__tit {
-      padding: 0 0 5vw 0;
-    }
-
-    &__img {
-      text-align: center;
-
-      & img {
-        height: 50%;
-        width: 50%;
-      }
-    }
   }
 }
 

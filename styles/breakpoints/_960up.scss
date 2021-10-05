@@ -172,7 +172,6 @@ Stylesheet: 960px以上のモニタで適用
 
 //footer
 .p-footer {
-  padding: 5vw 0;
 
   .c-logo {
     & img {
@@ -184,19 +183,8 @@ Stylesheet: 960px以上のモニタで適用
 
 //* *  * * * * * * * menu-page * * * * * * * * * * 
 .c-top {
-  margin-top: 5vw;
-
   &__tit {
     font-size: 3rem;
-  }
-
-  &__img {
-    text-align: center;
-
-    & img {
-      height: 50%;
-      width: 50%;
-    }
   }
 }
 
